@@ -1,0 +1,32 @@
+{
+  "name": "prime-factor-kata",
+  "version": "1.0.0",
+  "description": "code kata for prime factorials in vanilla javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GrandSuccess87/Prime-Factor-Kata.git"
+  },
+  "keywords": [
+    "javascript",
+    "kata",
+    "prime",
+    "factors",
+    "npm",
+    "jasmine",
+    "test",
+    "tdd"
+  ],
+  "author": "Quintessa Anderson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GrandSuccess87/Prime-Factor-Kata/issues"
+  },
+  "homepage": "https://github.com/GrandSuccess87/Prime-Factor-Kata#readme",
+  "dependencies": {
+    "jasmine": "^3.3.1"
+  }
+}
