@@ -6,16 +6,14 @@ function PrimeFactors() {
         // check if n > 1
         while(n > 1) {
             // Instead of testing for literals that are prime numbers, set a divisor
-            let divisor = 2;
-            while(divisor <= n) {
+            // set while loops as a for loop
+            for(let divisor = 2; divisor <= n; divisor++) {
             // Check if n is exactly divisible by the divisor
-            while(n % divisor === 0) {
+            // // n = n/divisor;
+            for (; n % divisor === 0; n/=divisor) {
                 //push the value onto an array
-                result.push(divisor);
-                // n = n/divisor;
-                n/=divisor;
+                result.push(divisor);                
             } 
-                divisor++;
             }
         }
         // return an empty array
