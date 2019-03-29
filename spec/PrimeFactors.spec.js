@@ -13,6 +13,6 @@ describe("Prime Factors", function() {
         expect(primeFactors.of(7)).toEqual([7]);
         expect(primeFactors.of(8)).toEqual([2,2,2]);
         expect(primeFactors.of(9)).toEqual([3,3]);
-        // expect(primeFactors.of(2,3,5,7,9,13,23)).toEqual([2,3,5,7,9,13,23]);
+        expect(primeFactors.of(2*2*3*7*13*23)).toEqual([2,2,3,7,13,23]);
     })
 })
