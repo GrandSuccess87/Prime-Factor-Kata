@@ -5,16 +5,17 @@ function PrimeFactors() {
         let result = [];
         // check if n > 1
         while(n > 1) {
-            // In order to check the prime factors of 4, need to make sure n is divisible by 2.
-            if(n % 2 === 0) {
+            // Instead of testing for literals that are prime numbers, set a divisor
+            let divisor = 2;
+            while(divisor <= n) {
+            // Check if n is exactly divisible by the divisor
+            while(n % divisor === 0) {
                 //push the value onto an array
-                result.push(2);
-                n = n/2;
-            }
-            else {
-                result.push(n);
-                // End the while loop
-                break;
+                result.push(divisor);
+                // n = n/divisor;
+                n/=divisor;
+            } 
+                divisor++;
             }
         }
         // return an empty array
