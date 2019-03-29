@@ -1,17 +1,25 @@
-let PrimeFactors = function() {};
-// define method of() as a prototypical function that returns an empty array 
-PrimeFactors.prototype.of = function (n) {
-    // 4 factorial 
-    let result = [];
-    //refactoring code so we only test n>1 once
-        //create a divisor to handle 9
-        for (var divisor = 2; divisor <= n; ++divisor ) {
-            for(; 0 === n % divisor; n /= divisor) {
-                //push n into the result array
-                result.push(divisor);
+function PrimeFactors() {
+    // create of() using prototype 
+    PrimeFactors.prototype.of = function(n) {
+        // create the result array 
+        let result = [];
+        // check if n > 1
+        while(n > 1) {
+            // In order to check the prime factors of 4, need to make sure n is divisible by 2.
+            if(n % 2 === 0) {
+                //push the value onto an array
+                result.push(2);
+                n = n/2;
             }
-        }  
-    return result;
-};
+            else {
+                result.push(n);
+                // End the while loop
+                break;
+            }
+        }
+        // return an empty array
+        return result;
+    };
+}
 
 module.exports = new PrimeFactors();
