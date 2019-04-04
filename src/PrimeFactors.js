@@ -1,21 +1,23 @@
-function PrimeFactors() {
-    // create of() using prototype 
-    PrimeFactors.prototype.of = function(n) {
-        // create the result array 
-        var result = [];
-            // Instead of testing for literals that are prime numbers, set a divisor
-            // set while loops as a for loop
-            for(var divisor = 2; divisor <= n; divisor++) {
-            // Check if n is exactly divisible by the divisor
-            // // n = n/divisor;
-            for (; n % divisor === 0; n/=divisor) {
-                //push the value onto an array
-                result.push(divisor);                
-            } 
-            }
-        // return an empty array
-        return result;
-    };
-}
+const PrimeFactors = function () {};
 
-module.exports = new PrimeFactors();
+PrimeFactors.prototype.of = function (n) {
+    let results = [];
+    while(n > 1) {
+        // if(n <= divisor) {}
+        if(0 === n % 2) {
+            results.push(2);
+            n /= 2;
+        } else if (0 === n % 3) {
+            results.push(3);
+            n /= 3;
+        } 
+        else {
+            results.push(n);
+            break;
+        }
+        
+    }
+    return results;
+};
+
+module.exports = new PrimeFactors ();
