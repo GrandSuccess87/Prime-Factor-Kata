@@ -1,6 +1,7 @@
-const PrimeFactors = function () {};
+// const PrimeFactors = function () {};
+export function primeFacorsOf(n) {
 
-PrimeFactors.prototype.of = function (n) {
+// PrimeFactors.prototype.of = function (n) {
     let results = [];
     while(n > 1) {
         // if(n <= divisor) {}
@@ -20,4 +21,4 @@ PrimeFactors.prototype.of = function (n) {
     return results;
 };
 
-module.exports = new PrimeFactors ();
+// module.exports = new PrimeFactors ();
